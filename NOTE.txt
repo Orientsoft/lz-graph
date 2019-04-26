@@ -1,0 +1,14 @@
+交易数据：
+    1）节点有属性
+    2）边有属性，有方向
+    
+    
+    
+    
+    
+模型选择：（https://github.com/dmlc/dgl）
+    1）GCN： 没边属性、没方向
+    2）GAT:  GAT 和 GCN 的核心区别在于如何收集并累和距离为 1 的邻居节点的特征表示。本质上，GAT 只是将原本的标准化常数替换为使用注意力权重的邻居节点特征聚合函数。
+    https://www.jiqizhixin.com/articles/2019-02-19-7
+    3)R-GCN:   https://arxiv.org/pdf/1703.06103.pdf
+    3)NGNN: 论文：https://arxiv.org/abs/1809.02709    代码：https://github.com/gongliyu/expr-tf-EGNN
