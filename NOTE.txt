@@ -1,7 +1,12 @@
 交易数据：
     1）节点有属性
     2）边有属性，有方向
-    
+神经网络基本概念：
+    1）convolution:卷尺
+    1）pooling层：池化  https://www.zhihu.com/question/36686900
+    3）感受野：即一个像素对应回原图的区域大小，
+    4）不变形：即当你把测试图片中的猫猫上下左右平移一段距离，随机旋转一个角度，或把图片放在镜子前面，对着镜子拍张照片，作为新的测试数据，或者把猫猫放大几倍，缩小几倍，神经网路的分类精度毫无变化。在神经网络里面，卷积操作带来了平移不变性，因为卷积核是从左到右，从上往下扫过整张图。Data Augmentation （将训练图片做裁剪，旋转，缩放，镜像翻转）强迫神经网络在训练的过程中保留能满足这些不变性的结构，这是跟卷积同样强大的技巧 -- 卷积操作除了从结构上实现平移不变性，还大大减少了神经网络的连接（权重参数），而Data Augmentation除了强迫神经网络选择有这些不变性的结构，也将训练数据集至少增大了一个数量级（10倍）。这两种技术对于消灭过拟合（Overfitting）居功甚伟。
+
     
     
     
@@ -12,3 +17,15 @@
     https://www.jiqizhixin.com/articles/2019-02-19-7
     3)R-GCN:   https://arxiv.org/pdf/1703.06103.pdf
     3)NGNN: 论文：https://arxiv.org/abs/1809.02709    代码：https://github.com/gongliyu/expr-tf-EGNN
+    
+《PyTorch 模型训练实用教程》:
+    1)https://github.com/tensor-yu/PyTorch_Tutorial/blob/master/Code/1_data_prepare/1_1_cifar10_to_png.py
+    
+pytorch 函数：
+    1）torch.cat:是将两个张量（tensor）拼接在一起，cat是concatnate的意思，即拼接，联系在一起。默认按行，1的话按列
+    2) nn.linear: 一般定义一个linear层的时候，Linear的创建需要两个参数，inputSize 和 outputSize ，inputSize：输入维度 ，outputSize：输出维度。 weight :tensor(类似矩阵)维度为 outputsize*inputsize,bias:tensor(类似list)outputsize
+    3）pytorch的十七个损失函数：https://zhuanlan.zhihu.com/p/61379965
+    4) pytorch的激活函数：
+    5) pytorch权值初始化的十种方法：https://zhuanlan.zhihu.com/p/53712833
+    
+    
